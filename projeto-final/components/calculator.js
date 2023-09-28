@@ -13,21 +13,40 @@ calculator.addEventListener(events.calculate, () => {
     const fatorFraldinhaKid = 0.1
     let picanhaQtd = numberMen * fatorPicanhaMen + numberWomen * fatorPicanhaWomen + numberKid * fatorPicanhaKid;
     let fraldinhaQtd = numberMen * fatorFraldinhaMen + numberWomen * fatorFraldinhaWomen + numberKid * fatorFraldinhaKid;
-    totalPeople.innerHTML ="Homens: " + numberMen + "<br />" + "Mulheres: " + numberWomen + "<br />" + "Crianças: " + numberKid + "<br />" + "Adultos que bebem: " + alcoholicInput.value;
+    totalPeople.innerHTML = "Homens: " + numberMen + "<br />" + "Mulheres: " + numberWomen + "<br />" + "Crianças: " + numberKid + "<br />" + "Adultos que bebem: " + alcoholicInput.value;
     firstTableData.innerText = "Picanha"
     secondTableData.innerText = picanhaQtd.toFixed(1) + " Kg";
     thirdTableData.innerText = "Fraldinha"
     forthTableData.innerText = fraldinhaQtd.toFixed(1) + " Kg";
-    calculator.removeChild(firstRow);
-    calculator.removeChild(secondRow);
-    calculator.appendChild(thirdRow);
-    calculator.appendChild(forthRow);
-    // forthRow.appendChild(buttonCalculate);
+    calculator.removeChild(inputRow);
+    calculator.removeChild(calculateRow);
+    calculator.appendChild(formRow);
+    calculator.appendChild(registerRow);
+    checkRegister()
+});
+
+calculator.addEventListener(events.register, () => {
+    localStorage.setItem("name", nameInput.value);
+    localStorage.setItem("email", emailInput.value);
+    localStorage.setItem("city", cityInput.value);
+    calculator.removeChild(formRow);
+    calculator.removeChild(registerRow);
+    calculator.appendChild(resultRow);
+    calculator.appendChild(recalculateRow);
 });
 
 calculator.addEventListener(events.recalculate, () => {
-    calculator.removeChild(thirdRow);
-    calculator.removeChild(forthRow);
-    calculator.appendChild(firstRow);
-    calculator.appendChild(secondRow);
-})
+    calculator.removeChild(resultRow);
+    calculator.removeChild(recalculateRow);
+    calculator.appendChild(inputRow);
+    calculator.appendChild(calculateRow);
+    menInput.value = 0;
+    womenInput.value = 0;
+    kidInput.value = 0;
+    alcoholicInput.value = 0;
+    sessionStorage.removeItem("men");
+    sessionStorage.removeItem("women");
+    sessionStorage.removeItem("kid");
+    sessionStorage.removeItem("alcoholic");
+});
+

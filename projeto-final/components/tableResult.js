@@ -1,5 +1,5 @@
-const forthInputGroup = document.createElement("div");
-forthInputGroup.classList.add("input-group")
+const tableInputGroup = document.createElement("div");
+tableInputGroup.classList.add("input-group")
 
 const table = document.createElement("table");
 

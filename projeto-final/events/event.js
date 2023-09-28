@@ -8,6 +8,6 @@ const events = {
     decrementKid: "Evento_decrementar_criança",
     decrementAlcBev: "Evento_decrementar_bebida",
     calculate: "Evento_calcular",
-    result: "Evento_mostrar_resultado",
+    register: "Evento_registrar_usuario",
     recalculate: "Evento_recalcular"
 }
