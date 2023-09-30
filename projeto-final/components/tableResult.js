@@ -29,3 +29,21 @@ const thirdTableRow = document.createElement("tr");
 const thirdTableData = document.createElement("td");
 
 const forthTableData = document.createElement("td");
+
+const resultRow = document.createElement("div");
+resultRow.classList.add("row");
+
+resultRow.appendChild(tableInputGroup);
+tableInputGroup.appendChild(table);
+table.appendChild(captionTable);
+table.appendChild(tableHead);
+tableHead.appendChild(firstTableRow);
+firstTableRow.appendChild(firstTableHead);
+firstTableRow.appendChild(secondTableHead);
+table.appendChild(tableBody);
+tableBody.appendChild(secondTableRow);
+secondTableRow.appendChild(firstTableData);
+secondTableRow.appendChild(secondTableData);
+tableBody.appendChild(thirdTableRow);
+thirdTableRow.appendChild(thirdTableData);
+thirdTableRow.appendChild(forthTableData);

@@ -22,7 +22,7 @@ alcoholicInputGroup.addEventListener(events.decrementAlcBev, () => {
 
 const alcoholicInput = document.createElement("input");
 alcoholicInput.setAttribute("type", "number");
-alcoholicInput.setAttribute("id", "kid");
+alcoholicInput.setAttribute("id", "alcohol");
 alcoholicInput.setAttribute("value", "0");
 alcoholicInput.setAttribute("readonly", "readonly");
 alcoholicInput.classList.add("input-valid");
@@ -47,3 +47,10 @@ alcoholicButtonPlus.innerText = "+";
 alcoholicButtonPlus.addEventListener("click", () => {
     alcoholicButtonPlus.dispatchEvent(new CustomEvent(events.incrementAlcBev, { bubbles: true }))
 });
+
+inputRow.appendChild(alcoholicInputGroup);
+alcoholicInputGroup.appendChild(alcoholicLabel);
+alcoholicInputGroup.appendChild(alcoholicInput);
+alcoholicInputGroup.appendChild(alcoholicButtonGroup);
+alcoholicButtonGroup.appendChild(alcoholicButtonMinus);
+alcoholicButtonGroup.appendChild(alcoholicButtonPlus);

@@ -9,5 +9,6 @@ const events = {
     decrementAlcBev: "Evento_decrementar_bebida",
     calculate: "Evento_calcular",
     register: "Evento_registrar_usuario",
-    recalculate: "Evento_recalcular"
+    recalculate: "Evento_recalcular",
+    changeTheme: "Evento_alterar_tema"
 }

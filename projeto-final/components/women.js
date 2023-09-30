@@ -43,3 +43,10 @@ womenButtonPlus.innerText = "+";
 womenButtonPlus.addEventListener("click", () => {
     womenButtonPlus.dispatchEvent(new CustomEvent(events.incrementWomen, { bubbles: true }))
 });
+
+inputRow.appendChild(womenInputGroup);
+womenInputGroup.appendChild(womenLabel);
+womenInputGroup.appendChild(womenInput);
+womenInputGroup.appendChild(womenButtonGroup);
+womenButtonGroup.appendChild(womenButtonMinus);
+womenButtonGroup.appendChild(womenButtonPlus);

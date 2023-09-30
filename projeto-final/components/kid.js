@@ -43,3 +43,10 @@ kidButtonPlus.innerText = "+";
 kidButtonPlus.addEventListener("click", () => {
     kidButtonPlus.dispatchEvent(new CustomEvent(events.incrementKid, { bubbles: true }))
 });
+
+inputRow.appendChild(kidInputGroup);
+kidInputGroup.appendChild(kidLabel);
+kidInputGroup.appendChild(kidInput);
+kidInputGroup.appendChild(kidButtonGroup);
+kidButtonGroup.appendChild(kidButtonMinus);
+kidButtonGroup.appendChild(kidButtonPlus);

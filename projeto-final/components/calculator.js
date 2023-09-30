@@ -22,7 +22,7 @@ calculator.addEventListener(events.calculate, () => {
     calculator.removeChild(calculateRow);
     calculator.appendChild(formRow);
     calculator.appendChild(registerRow);
-    checkRegister()
+    checkRegister();
 });
 
 calculator.addEventListener(events.register, () => {
@@ -50,3 +50,6 @@ calculator.addEventListener(events.recalculate, () => {
     sessionStorage.removeItem("alcoholic");
 });
 
+container.appendChild(calculator);
+
+calculator.appendChild(inputRow);

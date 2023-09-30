@@ -42,3 +42,10 @@ menButtonPlus.innerText = "+";
 menButtonPlus.addEventListener("click", () => {
     menButtonPlus.dispatchEvent(new CustomEvent(events.incrementMen, {bubbles: true}))
 });
+
+inputRow.appendChild(menInputGroup);
+menInputGroup.appendChild(menLabel);
+menInputGroup.appendChild(menInput);
+menInputGroup.appendChild(menButtonGroup);
+menButtonGroup.appendChild(menButtonMinus);
+menButtonGroup.appendChild(menButtonPlus);
