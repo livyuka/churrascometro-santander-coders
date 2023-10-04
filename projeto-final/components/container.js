@@ -2,7 +2,7 @@ const body = document.querySelector("body");
 
 const style = document.createElement("style");
 style.textContent = `body {
-    background-image: url(./background.jpg); 
+    background-color: #3F373C; 
 }`
 
 const app = document.querySelector("app");
