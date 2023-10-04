@@ -23,16 +23,35 @@ calculator.addEventListener(events.calculate, () => {
     calculator.appendChild(formRow);
     calculator.appendChild(registerRow);
     checkRegister();
+    
+    
 });
 
 calculator.addEventListener(events.register, () => {
-    localStorage.setItem("name", nameInput.value);
-    localStorage.setItem("email", emailInput.value);
-    localStorage.setItem("city", cityInput.value);
-    calculator.removeChild(formRow);
-    calculator.removeChild(registerRow);
-    calculator.appendChild(resultRow);
-    calculator.appendChild(recalculateRow);
+    const customer = {
+        name: nameInput.value,
+        email: emailInput.value,
+        cep: postalCodeInput.value
+    };
+
+    console.log("register funcionando");
+
+    api.getAddressByPostalCode(postalCodeInput.value)
+        .then((response) => {
+            localStorage.setItem("customer", JSON.stringify({...customer,response}));
+            calculator.removeChild(formRow);
+            calculator.removeChild(registerRow);
+            calculator.appendChild(resultRow);
+            calculator.appendChild(recalculateRow);
+        })
+        .catch((error) => {
+            console.log(error);
+            document.getElementById("errorPostalCode").style.visibility = "visible";
+        })
+
+    // localStorage.setItem("name", nameInput.value);
+    // localStorage.setItem("email", emailInput.value);
+    // localStorage.setItem("city", cityInput.value);
 });
 
 calculator.addEventListener(events.recalculate, () => {

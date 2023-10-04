@@ -10,20 +10,24 @@ headerForm.textContent = "Nessa casa sempre tem novidades! Cadastre seu e-mail. 
 const nameInput = document.createElement("input");
 nameInput.setAttribute("type", "text");
 nameInput.setAttribute("id", "name");
-nameInput.setAttribute("placeholder", "Seu nome");
+nameInput.setAttribute("placeholder", "Digite seu nome");
 nameInput.classList.add("input-form");
 
 const emailInput = document.createElement("input");
 emailInput.setAttribute("type", "email");
 emailInput.setAttribute("id", "email");
-emailInput.setAttribute("placeholder", "email@email.com");
+emailInput.setAttribute("placeholder", "Digite seu email");
 emailInput.classList.add("input-form");
 
-const cityInput = document.createElement("input");
-cityInput.setAttribute("type", "text");
-cityInput.setAttribute("id", "city");
-cityInput.setAttribute("placeholder", "Cidade");
-cityInput.classList.add("input-form")
+const postalCodeInput = document.createElement("input");
+postalCodeInput.setAttribute("type", "number");
+postalCodeInput.setAttribute("id", "postal-code");
+postalCodeInput.setAttribute("placeholder", "Digite seu CEP");
+postalCodeInput.classList.add("input-form");
+
+const postalCodeNotFound = document.createElement("p");
+postalCodeNotFound.setAttribute("id", "errorPostalCode");
+postalCodeNotFound.innerText = "Por favor, insira um CEP válido!";
 
 const divConsentInput = document.createElement("div");
 divConsentInput.setAttribute("id", "consent-input")
@@ -47,7 +51,8 @@ formInputGroup.appendChild(headerForm);
 formInputGroup.appendChild(formRegister);
 formRegister.appendChild(nameInput);
 formRegister.appendChild(emailInput);
-formRegister.appendChild(cityInput);
+formRegister.appendChild(postalCodeInput);
+formRegister.appendChild(postalCodeNotFound);
 formInputGroup.appendChild(divConsentInput);
 divConsentInput.appendChild(consentInput);
 divConsentInput.appendChild(labelConsentInput);
