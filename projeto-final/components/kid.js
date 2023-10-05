@@ -4,15 +4,12 @@ kidInputGroup.addEventListener(events.incrementKid, () => {
     let kid = kidInput.value;
     kid++
     kidInput.value = kid;
-    sessionStorage.setItem("kidInput", kidInput.value);
-
 })
 kidInputGroup.addEventListener(events.decrementKid, () => {
     let kid = kidInput.value;
     if (kid > 0) {
         kid--
         kidInput.value = kid;
-        sessionStorage.setItem("kidInput", kidInput.value);
     }
 });
 
@@ -20,7 +17,6 @@ const kidInput = document.createElement("input");
 kidInput.setAttribute("type", "number");
 kidInput.setAttribute("id", "kid");
 kidInput.setAttribute("value", "0");
-kidInput.setAttribute("readonly", "readonly");
 kidInput.classList.add("input-valid");
 
 const kidLabel = document.createElement("label");

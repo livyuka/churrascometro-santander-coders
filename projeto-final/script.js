@@ -1,2 +1,2 @@
-initiate();
 lightThemeCheck();
+addInputPage();

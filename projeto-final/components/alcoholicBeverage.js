@@ -8,7 +8,6 @@ alcoholicInputGroup.addEventListener(events.incrementAlcBev, () => {
     if (alcBev < totalAdult) {
         alcBev++
         alcoholicInput.value = alcBev;
-        sessionStorage.setItem("alcoholicInput", alcoholicInput.value);
     }
 })
 alcoholicInputGroup.addEventListener(events.decrementAlcBev, () => {
@@ -16,7 +15,6 @@ alcoholicInputGroup.addEventListener(events.decrementAlcBev, () => {
     if (alcBev > 0) {
         alcBev--
         alcoholicInput.value = alcBev;
-        sessionStorage.setItem("alcoholicInput", alcoholicInput.value);
     }
 });
 
@@ -24,7 +22,6 @@ const alcoholicInput = document.createElement("input");
 alcoholicInput.setAttribute("type", "number");
 alcoholicInput.setAttribute("id", "alcohol");
 alcoholicInput.setAttribute("value", "0");
-alcoholicInput.setAttribute("readonly", "readonly");
 alcoholicInput.classList.add("input-valid");
 
 const alcoholicLabel = document.createElement("label");

@@ -14,7 +14,6 @@ function checkRegister() {
 
 function checkName(){
     if (!nameInput.value || !isNaN(nameInput.value)) {
-        console.log("Nome inválido");
         document.getElementById("invalid-name").style.visibility = "visible";
         throw Error("Nome inválido");
     }else{
@@ -26,7 +25,6 @@ function checkEmail(){
     const validEmail = emailInput.value.includes("@");
 
     if (!validEmail){
-        console.log("Email inválido");
         document.getElementById("invalid-email").style.visibility = "visible";
         throw Error("E-mail inválido");
     }else{
@@ -54,5 +52,12 @@ async function checkAllFieldComplete() {
     if (checkCustomer) {
         removeRegisterPage();
         addResultPage();
+    }
+}
+async function sendPromotionalEmail() {
+    if (consentInput.checked) {
+        localStorage.setItem("sendPromotionalEmail", "yes")
+    }else {
+        localStorage.setItem("sendPromotionalEmail", "no")
     }
 }

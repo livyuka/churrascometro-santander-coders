@@ -1,9 +1,11 @@
 function addInputPage() {
+    calculator.appendChild(textInputPage);
     calculator.appendChild(inputRow);
     calculator.appendChild(calculateRow);
 }
 
 function removeInputPage() {
+    calculator.removeChild(textInputPage);
     calculator.removeChild(inputRow);
     calculator.removeChild(calculateRow);
 }

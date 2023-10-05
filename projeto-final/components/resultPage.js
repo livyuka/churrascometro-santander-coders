@@ -4,21 +4,33 @@ const resultTotalGuest = document.createElement("div");
 resultTotalGuest.classList.add("result-total-guest");
 
 const resultParagraph = document.createElement("p");
-resultParagraph.innerText = "Confira o resultado do seu churrasco!"
+resultParagraph.innerText = "Confira a lista para o seu churrasco!"
 
 const totalGuest = document.createElement("p");
-totalGuest.classList.add("total-guest");
-totalGuest.innerText = "X convidados"
+totalGuest.setAttribute("id", "total-guest")
 
 const guestList = document.createElement("ul");
-guestList.classList.add("guest-list");
 
-const menGuests = document.createElement("i");
-menGuests.innerText = "X homens"
-const womenGuests = document.createElement("i");
-womenGuests.innerText = "X mulheres"
-const kidGuests = document.createElement("i");
-kidGuests.innerText = "X crianças"
+const menGuests = document.createElement("span");
+menGuests.classList.add("guest-list");
+
+const womenGuests = document.createElement("span");
+womenGuests.classList.add("guest-list");
+
+const kidGuests = document.createElement("span");
+kidGuests.classList.add("guest-list");
+
+const totalGuestInputGroup = document.createElement("div");
+totalGuestInputGroup.classList.add("input-group-result")
+
+const headerResult = document.createElement("div");
+headerResult.setAttribute("id","header-result")
+
+const itemResult = document.createElement("p");
+itemResult.innerText = "ITEM";
+
+const amountResult = document.createElement("p");
+amountResult.innerText = "QUANTIDADE";
 
 const results = document.createElement("ul");
 results.classList.add("results");
@@ -79,9 +91,6 @@ ice.innerText = "Gelo";
 
 const iceAmount = document.createElement("span");
 
-const totalGuestInputGroup = document.createElement("div");
-totalGuestInputGroup.classList.add("input-group-result")
-
 resultRow.appendChild(resultTotalGuest);
 
 resultTotalGuest.appendChild(resultParagraph);
@@ -95,6 +104,9 @@ resultTotalGuest.appendChild(womenGuests);
 resultTotalGuest.appendChild(kidGuests);
 
 resultRow.appendChild(totalGuestInputGroup);
+totalGuestInputGroup.appendChild(headerResult);
+headerResult.appendChild(itemResult);
+headerResult.appendChild(amountResult);
 totalGuestInputGroup.appendChild(results);
 
 results.appendChild(resultMeat);
