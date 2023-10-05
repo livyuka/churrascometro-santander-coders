@@ -1,6 +1,4 @@
 const calculateInputGroup = document.createElement("div");
-// calculateInputGroup.classList.add("input-group");
-// calculateInputGroup.classList.add("default-button");
 
 const buttonCalculate = document.createElement("button");
 buttonCalculate.classList.add("default-button");

@@ -4,7 +4,7 @@ womenInputGroup.addEventListener(events.incrementWomen, () => {
     let women = womenInput.value;
     women++
     womenInput.value = women;
-    sessionStorage.setItem("women", womenInput.value);
+    sessionStorage.setItem("womenInput", womenInput.value);
 
 })
 womenInputGroup.addEventListener(events.decrementWomen, () => {
@@ -12,7 +12,7 @@ womenInputGroup.addEventListener(events.decrementWomen, () => {
     if (women > 0) {
         women--
         womenInput.value = women;
-        sessionStorage.setItem("women", womenInput.value);
+        sessionStorage.setItem("womenInput", womenInput.value);
     }
 });
 

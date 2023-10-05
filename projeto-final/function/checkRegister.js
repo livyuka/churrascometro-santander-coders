@@ -7,11 +7,8 @@ const customer = {
 function checkRegister() {
     const checkCustomer = localStorage.getItem("customer");
     if (checkCustomer) {
-        calculator.removeChild(formRow);
-        calculator.removeChild(registerRow);
-        calculator.appendChild(resultRow);
-        calculator.appendChild(recalculateRow);
-        sendPromotionalEmail();
+        removeRegisterPage();
+        addResultPage();
     }
 }
 
@@ -37,11 +34,14 @@ function checkEmail(){
     }
 }
 
-function checkPostalCode(){
+async function checkPostalCode(){
     api.getAddressByPostalCode(postalCodeInput.value)
-        .then((response) => {
+        .then(async (response) => {
             localStorage.setItem("customer", JSON.stringify({...customer,response}));
             document.getElementById("error-postal-code").style.visibility = "hidden";
+
+            await checkAllFieldComplete();
+            await sendPromotionalEmail();
         })
         .catch((error) => {
             console.log(error);
@@ -49,13 +49,10 @@ function checkPostalCode(){
             throw Error("CEP inválido");
         });
 }
-
-function checkAllFieldComplete() {
+async function checkAllFieldComplete() {
     const checkCustomer = localStorage.getItem("customer");
     if (checkCustomer) {
-        calculator.removeChild(formRow);
-        calculator.removeChild(registerRow);
-        calculator.appendChild(resultRow);
-        calculator.appendChild(recalculateRow);;
+        removeRegisterPage();
+        addResultPage();
     }
 }
