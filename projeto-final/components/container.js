@@ -43,5 +43,4 @@ app.appendChild(container);
 container.appendChild(h1);
 
 const inputRow = document.createElement("div");
-// inputRow.classList.add("row");
 inputRow.classList.add("row-first");

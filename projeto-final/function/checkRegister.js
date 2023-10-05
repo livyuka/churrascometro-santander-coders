@@ -49,6 +49,7 @@ async function checkPostalCode(){
             throw Error("CEP inválido");
         });
 }
+
 async function checkAllFieldComplete() {
     const checkCustomer = localStorage.getItem("customer");
     if (checkCustomer) {
