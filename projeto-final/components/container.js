@@ -10,6 +10,9 @@ container.classList.add("container");
 const h1 = document.createElement("h1");
 h1.innerText = "Churrascômetro";
 
+const textInputPage = document.createElement("h3");
+textInputPage.innerHTML = "Precisa de uma ajudinha com o churrasco? :)"  + "<br />" + "<br />" + "Quantos pessoas vão participar?"
+
 container.addEventListener(events.changeTheme, () => {
     document.body.classList.toggle("light-theme");
     if(document.body.classList.contains("light-theme")){
@@ -43,5 +46,4 @@ app.appendChild(container);
 container.appendChild(h1);
 
 const inputRow = document.createElement("div");
-// inputRow.classList.add("row");
 inputRow.classList.add("row-first");

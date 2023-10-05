@@ -2,6 +2,7 @@ const calculator = document.createElement("div");
 calculator.classList.add("calculator");
 
 calculator.addEventListener(events.calculate, () => {
+    validateInput();
     calculateItems();
     removeInputPage();
     addRegisterPage();
@@ -22,5 +23,3 @@ calculator.addEventListener(events.recalculate, () => {
 });
 
 container.appendChild(calculator);
-
-calculator.appendChild(inputRow);

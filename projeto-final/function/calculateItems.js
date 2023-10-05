@@ -2,8 +2,31 @@ function calculateItems() {
     const numberMen = parseInt(menInput.value);
     const numberWomen = parseInt(womenInput.value);
     const numberKid = parseInt(kidInput.value);
+    const numberAlcBev = parseInt(alcoholicInput.value);
     const numberAdult = numberMen + numberWomen;
     const numberGuest = numberAdult + numberKid;
+
+    // Summary of guest number
+    if (numberGuest === 1){
+        totalGuest.innerText = numberGuest + " convidado"
+    }else{
+        totalGuest.innerText = numberGuest + " convidados"
+    }
+    if (numberMen === 1){
+        menGuests.innerText = numberMen + " homem";
+    }else{
+        menGuests.innerText = numberMen + " homens";
+    }
+    if (numberWomen === 1){
+        womenGuests.innerText = numberWomen+ " mulher"
+    }else{
+        womenGuests.innerText = numberWomen+ " mulheres"
+    }
+    if (numberKid === 1){
+        kidGuests.innerText = numberKid + " criança"
+    }else{
+        kidGuests.innerText = numberKid + " crianças"
+    }
 
     //All Factors are per person or per group as detailed
 
@@ -40,7 +63,7 @@ function calculateItems() {
 
     //Calculate Beer Amount
     const beerFactor = 3;
-    const beerAmountResult = numberAdult * beerFactor;
+    const beerAmountResult = numberAlcBev * beerFactor;
     beerAmount.innerText = beerAmountResult + " garrafas de 600mL";
 
     //Calculate Charchoal Amount

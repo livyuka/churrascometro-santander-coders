@@ -5,7 +5,7 @@ const formRegister = document.createElement("form");
 
 const headerForm = document.createElement("p");
 headerForm.setAttribute("id", "header-form");
-headerForm.textContent = "Nessa casa sempre tem novidades! Cadastre seu e-mail. Fique por perto para saber dos novos cortes e linhas especiais, das promoções e novas receitas que experimentamos."
+headerForm.textContent = "Fique por dentro de todas as novidades. Cadastre seu e-mail e receba promoções especiais!"
 
 const nameInput = document.createElement("input");
 nameInput.setAttribute("type", "text");

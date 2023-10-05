@@ -4,14 +4,12 @@ menInputGroup.addEventListener(events.incrementMen, () => {
     let men = menInput.value;
     men++
     menInput.value = men;
-    sessionStorage.setItem("menInput", menInput.value);
 });
 menInputGroup.addEventListener(events.decrementMen, () => {
     let men = menInput.value;
     if (men > 0) {
         men--
         menInput.value = men;
-        sessionStorage.setItem("menInput", menInput.value);
     }
 });
 
@@ -19,7 +17,6 @@ const menInput = document.createElement("input");
 menInput.setAttribute("type", "number");
 menInput.setAttribute("id", "men");
 menInput.setAttribute("value", "0");
-menInput.setAttribute("readonly", "readonly");
 menInput.classList.add("input-valid");
 
 const menLabel = document.createElement("label");

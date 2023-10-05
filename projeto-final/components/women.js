@@ -4,15 +4,12 @@ womenInputGroup.addEventListener(events.incrementWomen, () => {
     let women = womenInput.value;
     women++
     womenInput.value = women;
-    sessionStorage.setItem("womenInput", womenInput.value);
-
 })
 womenInputGroup.addEventListener(events.decrementWomen, () => {
     let women = womenInput.value;
     if (women > 0) {
         women--
         womenInput.value = women;
-        sessionStorage.setItem("womenInput", womenInput.value);
     }
 });
 
@@ -20,7 +17,6 @@ const womenInput = document.createElement("input");
 womenInput.setAttribute("type", "number");
 womenInput.setAttribute("id", "women");
 womenInput.setAttribute("value", "0");
-womenInput.setAttribute("readonly", "readonly");
 womenInput.classList.add("input-valid");
 
 const womenLabel = document.createElement("label");
