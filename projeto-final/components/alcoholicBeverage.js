@@ -8,7 +8,7 @@ alcoholicInputGroup.addEventListener(events.incrementAlcBev, () => {
     if (alcBev < totalAdult) {
         alcBev++
         alcoholicInput.value = alcBev;
-        sessionStorage.setItem("alcoholic", alcoholicInput.value);
+        sessionStorage.setItem("alcoholicInput", alcoholicInput.value);
     }
 })
 alcoholicInputGroup.addEventListener(events.decrementAlcBev, () => {
@@ -16,7 +16,7 @@ alcoholicInputGroup.addEventListener(events.decrementAlcBev, () => {
     if (alcBev > 0) {
         alcBev--
         alcoholicInput.value = alcBev;
-        sessionStorage.setItem("alcoholic", alcoholicInput.value);
+        sessionStorage.setItem("alcoholicInput", alcoholicInput.value);
     }
 });
 

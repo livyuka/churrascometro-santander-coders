@@ -10,5 +10,7 @@ const events = {
     calculate: "Evento_calcular",
     register: "Evento_registrar_usuario",
     recalculate: "Evento_recalcular",
-    changeTheme: "Evento_alterar_tema"
+    changeTheme: "Evento_alterar_tema",
+    backNav: "Evento_voltar_pagina",
+    skipRegister: "Evento_pular_cadastro"
 }

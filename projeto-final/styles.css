@@ -17,7 +17,7 @@
     --div-border: #6b5e66;
     --default-button: #e56132;
     --title-page: #3F373C;
-    --bg-page: #b5aaa1;
+    --bg-page: #afa59c;
     --text-color: #181C23;
 }
 
@@ -45,6 +45,9 @@ caption {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+}
+.row{
+    width: 100%;
 }
 
 .row-first {
@@ -144,7 +147,7 @@ input::-webkit-inner-spin-button {
 
 .default-button {
     border: none;
-    margin: 10px;
+    margin: 40px 0 10px;
     border-radius: 10px;
     width: 150px;
     height: 40px;
@@ -199,6 +202,27 @@ form {
     color: rgb(220, 52, 52);
     font-size: small;
     visibility: hidden;
+}
+
+#nav-container{
+    position: relative;
+}
+
+#back-nav{
+    position: absolute;
+    left: 20px;
+    border: none;
+    background: none;
+    color: #151213;
+
+}
+
+#skip-register{
+    position: absolute;
+    right: 20px;
+    border: none;
+    background: none;
+    color: #151213;
 }
 
 #theme-button {

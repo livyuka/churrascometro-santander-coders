@@ -4,14 +4,14 @@ menInputGroup.addEventListener(events.incrementMen, () => {
     let men = menInput.value;
     men++
     menInput.value = men;
-    sessionStorage.setItem("men", menInput.value);
+    sessionStorage.setItem("menInput", menInput.value);
 });
 menInputGroup.addEventListener(events.decrementMen, () => {
     let men = menInput.value;
     if (men > 0) {
         men--
         menInput.value = men;
-        sessionStorage.setItem("men", menInput.value);
+        sessionStorage.setItem("menInput", menInput.value);
     }
 });
 

@@ -4,7 +4,7 @@ kidInputGroup.addEventListener(events.incrementKid, () => {
     let kid = kidInput.value;
     kid++
     kidInput.value = kid;
-    sessionStorage.setItem("kid", kidInput.value);
+    sessionStorage.setItem("kidInput", kidInput.value);
 
 })
 kidInputGroup.addEventListener(events.decrementKid, () => {
@@ -12,7 +12,7 @@ kidInputGroup.addEventListener(events.decrementKid, () => {
     if (kid > 0) {
         kid--
         kidInput.value = kid;
-        sessionStorage.setItem("kid", kidInput.value);
+        sessionStorage.setItem("kidInput", kidInput.value);
     }
 });
 
