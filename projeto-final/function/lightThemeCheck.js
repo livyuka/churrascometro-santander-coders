@@ -1,8 +1,8 @@
 function lightThemeCheck() {
-    const lightThemeOn = localStorage.getItem("lightTheme");
+    const lightThemeOn = localStorage.getItem("theme");
     if (lightThemeOn){
-        document.head.appendChild(lightTheme);
-        document.head.removeChild(style);
         inputTheme.removeAttribute("checked");
+        document.body.classList.toggle("light-theme");
+        labelThemeText.innerText = "Tema Claro";
     }
 }

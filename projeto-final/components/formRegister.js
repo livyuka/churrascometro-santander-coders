@@ -26,8 +26,14 @@ postalCodeInput.setAttribute("placeholder", "Digite seu CEP");
 postalCodeInput.classList.add("input-form");
 
 const postalCodeNotFound = document.createElement("p");
-postalCodeNotFound.setAttribute("id", "errorPostalCode");
+postalCodeNotFound.setAttribute("id", "error-postal-code");
 postalCodeNotFound.innerText = "Por favor, insira um CEP válido!";
+const invalidName = document.createElement("p");
+invalidName.setAttribute("id", "invalid-name");
+invalidName.innerText = "Por favor, insira um nome válido!";
+const invalidEmail = document.createElement("p");
+invalidEmail.setAttribute("id", "invalid-email");
+invalidEmail.innerText = "Por favor, insira um e-mail válido!";
 
 const divConsentInput = document.createElement("div");
 divConsentInput.setAttribute("id", "consent-input")
@@ -50,7 +56,9 @@ formRow.appendChild(formInputGroup);
 formInputGroup.appendChild(headerForm);
 formInputGroup.appendChild(formRegister);
 formRegister.appendChild(nameInput);
+formRegister.appendChild(invalidName);
 formRegister.appendChild(emailInput);
+formRegister.appendChild(invalidEmail);
 formRegister.appendChild(postalCodeInput);
 formRegister.appendChild(postalCodeNotFound);
 formInputGroup.appendChild(divConsentInput);

@@ -1,8 +1,9 @@
 const calculateInputGroup = document.createElement("div");
-calculateInputGroup.classList.add("input-group");
+// calculateInputGroup.classList.add("input-group");
+// calculateInputGroup.classList.add("default-button");
 
 const buttonCalculate = document.createElement("button");
-buttonCalculate.classList.add("input-group__button--big");
+buttonCalculate.classList.add("default-button");
 buttonCalculate.innerText = "Calcular";
 buttonCalculate.addEventListener("click", () => {
     buttonCalculate.dispatchEvent(new CustomEvent(events.calculate, {bubbles: true}))
