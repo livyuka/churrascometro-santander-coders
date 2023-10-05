@@ -29,7 +29,8 @@ alcoholicInput.classList.add("input-valid");
 
 const alcoholicLabel = document.createElement("label");
 alcoholicLabel.setAttribute("for", "alcohol");
-alcoholicLabel.innerText = "Quantos bebem?";
+alcoholicLabel.setAttribute("id", "alcoholicLabel");
+alcoholicLabel.innerText = "Quantos adultos bebem?";
 
 const alcoholicButtonGroup = document.createElement("div");
 alcoholicButtonGroup.classList.add("button-group");

@@ -10,27 +10,6 @@ calculator.addEventListener(events.calculate, () => {
     checkRegister();
 });
 
-calculator.addEventListener(events.register, () => {
-    const customer = {
-        name: nameInput.value,
-        email: emailInput.value,
-        cep: postalCodeInput.value
-    };
-
-    api.getAddressByPostalCode(postalCodeInput.value)
-        .then((response) => {
-            localStorage.setItem("customer", JSON.stringify({...customer,response}));
-            calculator.removeChild(formRow);
-            calculator.removeChild(registerRow);
-            calculator.appendChild(resultRow);
-            calculator.appendChild(recalculateRow);
-        })
-        .catch((error) => {
-            console.log(error);
-            document.getElementById("errorPostalCode").style.visibility = "visible";
-        })
-});
-
 calculator.addEventListener(events.recalculate, () => {
     calculator.removeChild(resultRow);
     calculator.removeChild(recalculateRow);

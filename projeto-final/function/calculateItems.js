@@ -23,7 +23,6 @@ function calculateItems() {
     //Calculate Soda Amount
     const sodaFactor = 0.2;
     const sodaAmountResult = numberGuest * sodaFactor;
-    console.log(sodaAmountResult);
     if (sodaAmountResult <= 1){
         sodaAmount.innerText = Math.ceil(sodaAmountResult) + " garrafa de 2 L";
     }else{
@@ -33,7 +32,6 @@ function calculateItems() {
     //Calculate Water Amount
     const waterFactor = 0.2;
     const waterAmountResult = numberGuest * waterFactor;
-    console.log(waterAmountResult);
     if (waterAmountResult <= 1){
         waterAmount.innerText = Math.ceil(waterAmountResult) + " garrafa de 1 L";
     }else{
@@ -59,5 +57,4 @@ function calculateItems() {
     const iceFactor = 0.5;
     const iceAmountResult = numberGuest * iceFactor;
     iceAmount.innerText = iceAmountResult + " kg";
-    
 }
