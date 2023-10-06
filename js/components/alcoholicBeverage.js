@@ -24,10 +24,10 @@ alcoholicInput.setAttribute("id", "alcohol");
 alcoholicInput.setAttribute("value", "0");
 alcoholicInput.classList.add("input-valid");
 
-const alcoholicLabel = document.createElement("label");
+const alcoholicLabel = document.createElement("p");
 alcoholicLabel.setAttribute("for", "alcohol");
 alcoholicLabel.setAttribute("id", "alcoholicLabel");
-alcoholicLabel.innerText = "Quantos adultos bebem?";
+alcoholicLabel.innerText = "Quantas consomem bebida alcoólica?";
 
 const alcoholicButtonGroup = document.createElement("div");
 alcoholicButtonGroup.classList.add("button-group");
