@@ -22,6 +22,10 @@ Vamos fazer um churrasco? 👉 [Link para o Churrascômetro](https://livyuka.git
 - `Funcionalidade 5` `Alternar tema `: É possível alterar o tema da página entre claro e escuro.
 
 ## 📑 Prévia do projeto
-Esta são as três telas desenvolvidas para esse Churrascômetro.
+Estas são as três telas desenvolvidas para esse Churrascômetro.
 
-![Prévia do Projeto, com imagens das três telas do Churrascômetro](assets/previewProject.png)
+Tema Escuro:
+![Prévia do Projeto com tema escuro, com imagens das três telas do Churrascômetro](assets/previewDarkMode.png)
+
+Tema Claro:
+![Prévia do Projeto com tema claro, com imagens das três telas do Churrascômetro](assets/previewLightMode.png)

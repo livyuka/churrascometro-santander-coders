@@ -141,7 +141,10 @@ caption {
 }
 
 #alcoholicLabel {
-    font-size:medium;
+    color: #181C23;
+    font-size:17px;
+    margin: 8px;
+    font-weight: 600;
 }
 
 input::-webkit-outer-spin-button,
@@ -263,6 +266,7 @@ form {
     right: 80px;
     font-weight:700;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 .switch {

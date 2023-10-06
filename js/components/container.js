@@ -11,7 +11,7 @@ const h1 = document.createElement("h1");
 h1.innerText = "Churrascômetro";
 
 const textInputPage = document.createElement("h3");
-textInputPage.innerHTML = "Precisa de uma ajudinha com o churrasco? :)"  + "<br />" + "<br />" + "Quantos pessoas vão participar?"
+textInputPage.innerHTML = "Precisa de uma ajudinha com o churrasco? :)"  + "<br />" + "<br />" + "Quantas pessoas vão participar?"
 
 container.addEventListener(events.changeTheme, () => {
     document.body.classList.toggle("light-theme");
